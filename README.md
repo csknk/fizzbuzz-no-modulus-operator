@@ -13,7 +13,7 @@ Divisibility by Three
 ---------------------
 This can be determined by comparing the sum of odd binary digits (mod 3) with the sum of even binary digits (mod 3). If these values are equal, then the number is divisible by 3.
 
-Example:
+### Example 1
 
 42
 
@@ -24,11 +24,12 @@ Represented in binary digits, "even" bits marked:
 ```
 
 Sum of odd bits = `0 + 0 + 0 ≡ 0 mod 3`
+
 Sum of even bits = `1 + 1 + 1 ≡ 0 mod 3`
 
 These are equal, so 42 is divisible by 3.
 
-Example:
+### Example 2
 
 43
 
@@ -39,9 +40,10 @@ Represented in binary digits, "even" bits marked:
 ```
 
 Sum of odd bits = `0 + 0 + 1 ≡ 1 mod 3`
+
 Sum of even bits = `1 + 1 + 1 ≡ 0 mod 3`
 
-These are equal, so 42 is divisible by 3.
+These are not equal, so 42 is divisible by 3.
 
 This algorithm still requires you to calculate the modulus of the sum of bits. Because the operand will have limited size, we can compute this by repeated subtraction. For a 32 bit integer, the maximum size of the operand will be 16 (i.e. the sum of 16 bits) which requires a maximum 5 subtractions.
 
